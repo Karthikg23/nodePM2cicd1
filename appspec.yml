@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source:  deploy.zip
     destination: /home/ec2-user/nodepm2cicd1
 permissions:
   - object: /home/ec2-user/nodepm2cicd1 
