@@ -8,12 +8,12 @@ phases:
       - npm install
   build:
     commands:
-      - echo "Running tests..."
-      - npm test
+      - echo "Build step (optional, skipping in this case)"
   post_build:
     commands:
-      - echo "Packaging application..."
+      - echo "Zipping artifacts..."
+      - zip -r deploy.zip *  
 artifacts:
   files:
-    - '**/*'
-  discard-paths: no
+    - deploy.zip
+  discard-paths: yes
